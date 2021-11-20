@@ -8,7 +8,7 @@ COMO JUGAR (CONTROLES)
 W -> Para mover tu paleta hacia arriba
 S -> Para mover tu paleta hacia abajo
 
-#Preguntas
+# Preguntas
 ¿Como se agregan sonidos desde JS?
 ¿Como se agrega html desde js?
 ¿Como manipular valores de css desde JS?

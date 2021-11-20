@@ -1,0 +1,72 @@
+body{
+    background-color: whitesmoke;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 20px;
+    /* border: 1px solid; */
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+#container{
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 450px;
+    width: 1100px;
+    box-shadow: black 5px 5px 15px;
+}
+
+#puntos-jugador, #puntos-maquina{
+    color: whitesmoke;
+    position: absolute;
+    font-size: 40px;
+    margin-top: 25px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#puntos-jugador{
+    left: 510px;
+}
+
+#puntos-maquina{
+    left: 800px;
+}
+
+#divisor{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 449px;
+    width: 5px;
+    background-color: whitesmoke;
+}
+
+#paleta-jugador, #paleta-maquina{
+    position: absolute;
+    background-color: whitesmoke;
+    height: 72px;
+    width: 10px;
+}
+
+#bolita {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:absolute;
+}

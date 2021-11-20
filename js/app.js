@@ -38,7 +38,7 @@ document.addEventListener('keyup', (e) => {
 cicloJuego();
 
 function reset(){
-    new Audio('css/puntos.mp3').play();
+    new Audio('sounds/puntos.mp3').play();
     clearInterval(id);
     Vx = -1;
     Vy = -1;
@@ -64,14 +64,14 @@ function cicloJuego() {
                 return;
             }
             if(marginTop(bolita)<0 || (marginTop(bolita)+20) > 450){
-                new Audio('css/choque.mp3').play();
+                new Audio('sounds/choque.mp3').play();
                 Vy = -Vy;
             }
 
             let paleta = (marginLeft(bolita)+10<450) ? paletaJugador : paletaMaquina;
 
             if(detectarColision(paleta)){
-                new Audio('css/golpe.mp3').play();
+                new Audio('sounds/golpe.mp3').play();
                 let angulo;
                 let type = (marginLeft(paleta) == 30) ? 'jugador' : 'maquina';
 
@@ -125,7 +125,16 @@ function detectarColision(paleta){
     paleta.centerX = marginLeft(paleta)+5;
     paleta.centerY = marginTop(paleta) +36;
 
-    return bolita.left < paleta.right && bolita.top < paleta.bottom && bolita.right > paleta.left && bolita.bottom > paleta.top;
+    let type = (marginLeft(paleta) == 30 ) ? 'jugador' : 'maquina';
+    let boolean = false;
+
+    if(type == 'jugador' && Vx < 0){
+        boolean = true;
+    }else if(type == 'maquina' && Vx > 0){
+        boolean = true;
+    }
+
+    return bolita.left < paleta.right && bolita.top < paleta.bottom && bolita.right > paleta.left && bolita.bottom > paleta.top && boolean;
 }
 
 function marginTop(elem){
